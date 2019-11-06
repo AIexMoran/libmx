@@ -1,4 +1,4 @@
-# libmx_02
+# libmx
 
 How to use:
 1. make
