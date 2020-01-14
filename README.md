@@ -1,6 +1,6 @@
 # libmx
 ### Installation:
->**1. git clone **  
+>**1. git clone**  
 >**2. make**  
 >**3. [compile with source code]**  
 ### Description:
