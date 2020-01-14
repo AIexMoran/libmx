@@ -1,10 +1,5 @@
 #include "libmx.h"
 
-char *mx_strnew(const int size);
-char *mx_strcat(char *restrict s1, const char *restrict s2);
-char *mx_strcpy(char *dst, const char *src);
-int mx_strlen(const char *str);
-
 char *mx_strjoin(const char *s1, const char *s2) {
     char *result = NULL;
 

@@ -1,7 +1,5 @@
 #include "libmx.h"
 
-int mx_strlen(const char *str);
-
 int mx_get_char_index(const char *str, char c) {
     if (!str) {
         return -2;

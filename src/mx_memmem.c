@@ -1,10 +1,7 @@
 #include "libmx.h"
 
-void *mx_memchr(const void *s, int c, size_t n);
-void *mx_memrchr(const void *s, int c, size_t n);
-int mx_memcmp(const void *s1, const void *s2, size_t n);
-
-void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len) {
+void *mx_memmem(const void *big, size_t big_len,
+const void *little, size_t little_len) {
     const unsigned char *big_c = big;
     const unsigned char *little_c = little;
 

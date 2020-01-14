@@ -1,36 +1,23 @@
 #include "libmx.h"
 
-int mx_strlen(const char *str);
-bool mx_isspace(char c);
-char *mx_strncpy(char *dst, const char *src, int len);
-char *mx_strnew(const int size);
-
 char *mx_strtrim(const char *str) {
-    if (!str) {
-        return NULL;
-    }
-    int left_spaces = 0;
-    int right_spaces = 0;
-    int length_str = mx_strlen(str);
+    int l_spaces = 0;
+    int r_spaces = 0;
     char *result = NULL;
+    int l_str = 0;
 
-    for (int i = 0; i < length_str; i++) {
-        if (mx_isspace(str[i])) {
-            left_spaces++;
-            continue;
-        }
-        break;
+    if (str)
+        l_str = mx_strlen(str);
+    else
+        return NULL;
+    while (mx_isspace(str[l_spaces])) {
+        l_spaces++;
     }
-    for (int i = length_str - 1; i >= 0; i--) {
-        if (mx_isspace(str[i])) {
-            right_spaces++;
-            continue;
-        }
-        break;
+    while (mx_isspace(str[l_str - r_spaces - 1])) {
+        r_spaces++;
     }
-    if (left_spaces == length_str) {
+    if (l_spaces == l_str)
         return mx_strnew(0);
-    }
-    result = mx_strnew(length_str - left_spaces - right_spaces);
-    return mx_strncpy(result, str + left_spaces, length_str - left_spaces - right_spaces);
+    result = mx_strnew(l_str - l_spaces - r_spaces);
+    return mx_strncpy(result, str + l_spaces, l_str - l_spaces - r_spaces);
 }
