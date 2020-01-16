@@ -69,6 +69,7 @@ OBJS = $(addprefix $(OBJD)/, $(SRC:%.c=%.o))
 
 CFLAGS = -std=c11 -Wall -Wextra -Wpedantic -Werror
 AR = ar rcs
+CC = clang
 
 all: install clean
 
