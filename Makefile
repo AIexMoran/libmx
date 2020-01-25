@@ -71,9 +71,9 @@ CFLAGS = -std=c11 -Wall -Wextra -Wpedantic -Werror
 AR = ar rcs
 CC = clang
 
-all: install clean
+all: $(NAME)
 
-install: $(NAME)
+install: $(NAME) clean
 
 $(NAME): $(OBJS)
 	@$(AR) $@ $^
