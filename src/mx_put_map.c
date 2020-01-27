@@ -19,10 +19,11 @@ static void put_value(t_node *node, char *key, void *value) {
         }
         if (!node->next) {
             new_node = malloc(sizeof(t_node));
-            node->next = new_node;
             new_node->data = value;
             new_node->key = key;
             new_node->next = NULL;
+            node->next = new_node;
+            break;
         }
         node = node->next;
     }
