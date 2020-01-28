@@ -60,6 +60,10 @@ SRC = mx_strnew.c \
 	mx_sqrt.c \
 	mx_strsplit.c \
 	mx_strndup.c \
+	mx_d_push_front.c \
+	mx_d_create_node.c \
+	mx_d_pop_back.c \
+	mx_d_list_size.c \
 
 INCLUDE = -I $(INCD) \
 

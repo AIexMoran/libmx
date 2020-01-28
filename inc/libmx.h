@@ -17,6 +17,11 @@ typedef struct s_list {
     struct s_list *next;
 } t_list;
 
+typedef struct s_d_list {
+    void *data;
+    struct s_d_list *next;
+    struct s_d_list *prev;
+} t_d_list;
 
 typedef struct s_node {
     void *data;
@@ -37,7 +42,14 @@ void mx_push_back(t_list **list, void *data);
 void mx_pop_front(t_list **head);
 void mx_pop_back(t_list **head);
 
-t_map *mx_create_map(size_t size);
+int mx_d_list_size(t_d_list *list);
+t_d_list *mx_d_create_node(void *data);
+void mx_d_push_front(t_d_list **list, void *data);
+void mx_d_push_back(t_d_list **list, void *data);
+void mx_d_pop_front(t_d_list **head);
+void mx_d_pop_back(t_d_list **head);
+
+    t_map *mx_create_map(size_t size);
 void mx_put_map(t_map **map, char *key, void *value);
 void *mx_get_map(t_map **map, char *key);
 void mx_del_map(t_map **map);
