@@ -47,6 +47,7 @@ SRC = mx_strnew.c \
 	mx_del_map.c \
 	mx_binary_search.c \
 	mx_bubble_sort.c \
+	mx_print_strarr.c \
 	mx_count_words.c \
 	mx_strtrim.c \
 	mx_del_extra_spaces.c \

@@ -91,6 +91,8 @@ unsigned long mx_hex_to_nbr(const char *hex);
 char *mx_nbr_to_hex(unsigned long nbr);
 char *mx_strcpy(char *dst, const char *src);
 void mx_swap_char(char *s1, char *s2);
+int mx_bubble_sort(char **arr, int size);
+void mx_print_strarr(char **arr, const char *delim);
 void *mx_memmove(void *dst, const void *src, size_t len);
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void *mx_realloc(void *ptr, size_t size);
