@@ -65,6 +65,7 @@ SRC = mx_strnew.c \
 	mx_d_create_node.c \
 	mx_d_pop_back.c \
 	mx_d_list_size.c \
+	mx_d_del_list.c \
 
 INCLUDE = -I $(INCD) \
 
