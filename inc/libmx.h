@@ -48,8 +48,9 @@ void mx_d_push_front(t_d_list **list, void *data);
 void mx_d_push_back(t_d_list **list, void *data);
 void mx_d_pop_front(t_d_list **head);
 void mx_d_pop_back(t_d_list **head);
+void mx_d_del_list(t_d_list **list);
 
-    t_map *mx_create_map(size_t size);
+t_map *mx_create_map(size_t size);
 void mx_put_map(t_map **map, char *key, void *value);
 void *mx_get_map(t_map **map, char *key);
 void mx_del_map(t_map **map);
