@@ -41,6 +41,7 @@ void mx_push_front(t_list **list, void *data);
 void mx_push_back(t_list **list, void *data);
 void mx_pop_front(t_list **head);
 void mx_pop_back(t_list **head);
+void mx_del_list(t_list **head);
 
 int mx_d_list_size(t_d_list *list);
 t_d_list *mx_d_create_node(void *data);

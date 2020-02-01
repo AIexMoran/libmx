@@ -20,6 +20,7 @@ SRC = mx_strnew.c \
 	mx_push_back.c \
 	mx_pop_front.c \
 	mx_pop_back.c \
+	mx_del_list.c \
 	mx_numlen.c \
 	mx_printstr.c \
 	mx_atoi.c \
