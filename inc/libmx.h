@@ -56,6 +56,7 @@ void mx_put_map(t_map **map, char *key, void *value);
 void *mx_get_map(t_map **map, char *key);
 void mx_del_map(t_map **map);
 
+int mx_arr_size(char **arr);
 char *mx_pr_num_to_hex(unsigned long num);
 void mx_del_strarr(char ***strs);
 void mx_strdel(char **str);
