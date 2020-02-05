@@ -100,4 +100,4 @@ void *mx_memmove(void *dst, const void *src, size_t len);
 void *mx_memcpy(void *restrict dst, const void *restrict src, size_t n);
 void *mx_realloc(void *ptr, size_t size);
 bool mx_isescape(char c);
-int mx_hash(void *data);
+unsigned int mx_hash(void *data);

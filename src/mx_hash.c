@@ -1,6 +1,6 @@
 #include "libmx.h"
 
-unsigned mx_hash(void *data) {
+unsigned int mx_hash(void *data) {
     const unsigned char *bytes = data;
     unsigned int hash = 7;
 
