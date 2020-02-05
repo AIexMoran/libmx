@@ -3,7 +3,7 @@
 static void put_value(t_node **node, char *key, void *value);
 
 void mx_put_map(t_map **map, char *key, void *value) {
-    int index = mx_hash(key) % (*map)->size;
+    unsigned int index = mx_hash(key) % (*map)->size;
 
     put_value(&(*map)->nodes[index], key, value);
 }
