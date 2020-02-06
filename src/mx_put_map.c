@@ -11,8 +11,9 @@ void mx_put_map(t_map **map, char *key, void *value) {
 static void put_value(t_node **node, char *key, void *value) {
     t_node *new_node = NULL;
     t_node *last = NULL;
+    t_node *tmp = NULL;
 
-    for (t_node *tmp = *node; tmp; tmp = tmp->next) {
+    for (tmp = *node; tmp; tmp = tmp->next) {
         if (!mx_strcmp(tmp->key, key)) {
             free(tmp->data);
             tmp->data = value;
