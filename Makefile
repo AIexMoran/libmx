@@ -6,6 +6,7 @@ OBJD = obj
 INC = libmx.h
 
 SRC = mx_strnew.c \
+	mx_arr_to_str.c \
 	mx_strlen.c \
 	mx_strncpy.c \
 	mx_str_reverse.c \
