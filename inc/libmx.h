@@ -12,27 +12,31 @@
 #include <stdbool.h>
 #include <malloc/malloc.h>
 
-typedef struct s_list {
+typedef struct s_list
+{
     void *data;
     struct s_list *next;
-} t_list;
+}              t_list;
 
-typedef struct s_d_list {
+typedef struct s_d_list
+{
     void *data;
     struct s_d_list *next;
     struct s_d_list *prev;
-} t_d_list;
+}              t_d_list;
 
-typedef struct s_node {
+typedef struct s_node
+{
     void *data;
     char *key;
     struct s_node *next;
-} t_node;
+}              t_node;
 
-typedef struct s_map {
+typedef struct s_map
+{
     t_node **nodes;
     size_t size;
-} t_map;
+}              t_map;
 
 t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
 int mx_list_size(t_list *list);
