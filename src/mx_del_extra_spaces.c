@@ -1,6 +1,15 @@
 #include "libmx.h"
 
-static int length_without_spaces(char *str);
+static int length_without_spaces(char *str) {
+    int length = 0;
+
+    for (int i = 0; i < mx_strlen(str) - 1; i++) {
+        if (mx_isspace(str[i]) && mx_isspace(str[i + 1])) {
+            length++;
+        }
+    }
+    return mx_strlen(str) - length;
+}
 
 char *mx_del_extra_spaces(const char *str) {
     char *result = NULL;
@@ -19,15 +28,4 @@ char *mx_del_extra_spaces(const char *str) {
         }
     }
     return result;
-}
-
-static int length_without_spaces(char *str) {
-    int length = 0;
-
-    for (int i = 0; i < mx_strlen(str) - 1; i++) {
-        if (mx_isspace(str[i]) && mx_isspace(str[i + 1])) {
-            length++;
-        }
-    }
-    return mx_strlen(str) - length;
 }

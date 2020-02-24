@@ -1,13 +1,5 @@
 #include "libmx.h"
 
-static void put_value(t_node **node, char *key, void *value);
-
-void mx_put_map(t_map **map, char *key, void *value) {
-    unsigned int index = mx_hash(key) % (*map)->size;
-
-    put_value(&(*map)->nodes[index], key, value);
-}
-
 static void put_value(t_node **node, char *key, void *value) {
     t_node *new_node = NULL;
     t_node *last = NULL;
@@ -29,4 +21,10 @@ static void put_value(t_node **node, char *key, void *value) {
         last->next = new_node;
     else
         *node = new_node;
+}
+
+void mx_put_map(t_map **map, char *key, void *value) {
+    unsigned int index = mx_hash(key) % (*map)->size;
+
+    put_value(&(*map)->nodes[index], key, value);
 }

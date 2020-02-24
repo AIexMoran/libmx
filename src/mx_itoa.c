@@ -1,6 +1,10 @@
 #include "libmx.h"
 
-static int pos(int num);
+static int pos(int num) {
+    if (num < 0)
+        return -num;
+    return num;
+}
 
 char *mx_itoa(int number) {
     int len = mx_numlen(number);
@@ -15,10 +19,4 @@ char *mx_itoa(int number) {
         number /= 10;
     }
     return result;
-}
-
-static int pos(int num) {
-    if (num < 0)
-        return -num;
-    return num;
 }

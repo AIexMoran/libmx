@@ -6,7 +6,7 @@ void *mx_memrchr(const void *s, int c, size_t n) {
     s_c += n;
     while (n--) {
         if (*s_c == c) {
-            return (void *) (s_c);
+            return (void*)s_c;
         }
         s_c--;
 

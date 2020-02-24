@@ -1,6 +1,14 @@
 #include "libmx.h"
 
-static bool check(int *low, int *high, int med, int cmp);
+static bool check(int *low, int *high, int med, int cmp) {
+    if (cmp == 0)
+        return true;
+    if (cmp < 0)
+        *low = med + 1;
+    else
+        *high = med - 1;
+    return false;
+}
 
 int mx_binary_search(char **arr, int size, const char *s, int *count) {
     int low = 0;
@@ -21,14 +29,4 @@ int mx_binary_search(char **arr, int size, const char *s, int *count) {
     }
     *count = 0;
     return -1;
-}
-
-static bool check(int *low, int *high, int med, int cmp) {
-    if (cmp == 0)
-        return true;
-    if (cmp < 0)
-        *low = med + 1;
-    else
-        *high = med - 1;
-    return false;
 }

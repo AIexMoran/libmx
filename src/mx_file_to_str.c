@@ -1,6 +1,12 @@
 #include "libmx.h"
 
-static void append(char **result, char *buf);
+static void append(char **result, char *buf) {
+    char *tmp_str = mx_strjoin(*result, buf);
+
+    mx_strdel(result);
+    *result = mx_strdup(tmp_str);
+    mx_strdel(&tmp_str);
+}
 
 char *mx_file_to_str(const char *file) {
     int f_d = 0;
@@ -19,12 +25,4 @@ char *mx_file_to_str(const char *file) {
         return NULL;
     }
     return result;
-}
-
-static void append(char **result, char *buf) {
-    char *tmp_str = mx_strjoin(*result, buf);
-
-    mx_strdel(result);
-    *result = mx_strdup(tmp_str);
-    mx_strdel(&tmp_str);
 }

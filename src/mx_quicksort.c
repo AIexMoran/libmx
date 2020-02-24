@@ -1,7 +1,6 @@
 #include "libmx.h"
 
-static int swap(char **str1, char **str2)
-{
+static int swap(char **str1, char **str2) {
     char *tmp = *str1;
     
     *str1 = *str2;
@@ -14,7 +13,7 @@ static int partition(char **arr, int l, int r, int *swap_count) {
     int i = l - 1;
     int j = r + 1;
 
-    while (69) {
+    while (1) {
         while (mx_strlen(arr[++i]) < pivot);
         while (mx_strlen(arr[--j]) > pivot);
         if (i >= j)
@@ -23,12 +22,12 @@ static int partition(char **arr, int l, int r, int *swap_count) {
     }
 }
 
-int mx_quicksort(char **arr, int left, int right)
-{
+int mx_quicksort(char **arr, int left, int right) {
     int swap_count = 0;
     if (left < right) {
         int p = partition(arr, left, right, &swap_count);        
-        return (swap_count + mx_quicksort(arr, left, p) + mx_quicksort(arr, p + 1, right));
+        return (swap_count + mx_quicksort(arr, left, p)
+                + mx_quicksort(arr, p + 1, right));
     }
     return 0;
 }

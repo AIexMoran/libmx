@@ -1,6 +1,8 @@
 #include "libmx.h"
 
-static bool isvalid_char(char c);
+static bool isvalid_char(char c) {
+    return mx_isspace(c) || c == '-' || c == '+';
+}
 
 int mx_atoi(const char *str) {
     int result = 0;
@@ -18,8 +20,4 @@ int mx_atoi(const char *str) {
         i++;
     }
     return result * sign;
-}
-
-static bool isvalid_char(char c) {
-    return mx_isspace(c) || c == '-' || c == '+';
 }

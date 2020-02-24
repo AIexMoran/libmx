@@ -1,7 +1,5 @@
 #include "libmx.h"
 
-void mx_strdel(char **str);
-
 void mx_del_strarr(char ***arr) {
     char **del_arr = *arr;
 

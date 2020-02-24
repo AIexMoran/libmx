@@ -9,11 +9,11 @@ const void *little, size_t little_len) {
         return NULL;
     }
     if (little_len == 1) {
-        return mx_memchr(big, (int) *little_c, big_len);
+        return mx_memchr(big, (int)*little_c, big_len);
     }
     for (size_t i = 0; i < big_len - little_len + 1; i++) {
         if (!mx_memcmp(big_c, little_c, little_len)) {
-            return (void *) big_c;
+            return (void*)big_c;
         }
         big_c++;
     }

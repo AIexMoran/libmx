@@ -9,7 +9,7 @@ char **mx_strsplit(const char *s, char c) {
     if (!s)
         return NULL;
     size = mx_count_words(s, c);
-    result = malloc(sizeof(char *) * (size + 1));
+    result = malloc(sizeof(char*) * (size + 1));
     while (*s) {
         index = mx_get_char_index(s, c);
         index = index == -1 ? mx_strlen(s) : index;

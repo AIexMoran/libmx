@@ -9,7 +9,7 @@ char *mx_strstr(const char *haystack, const char *needle) {
     }
     for (int i = 0; i <= mx_strlen(save_haystack) - needle_length; i++) {
         if (!mx_strncmp(haystack, needle, needle_length)) {
-            return (char *) haystack;
+            return (char*)haystack;
         }
         haystack++;
     }
