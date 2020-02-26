@@ -1,6 +1,14 @@
 #include "libmx.h"
 
-static int length_str(unsigned long nbr);
+static int length_str(unsigned long nbr) {
+    int length = nbr == 0 ? 1 : 0;
+
+    while (nbr) {
+        nbr /= 16;
+        length++;
+    }
+    return length;
+}
 
 char *mx_nbr_to_hex(unsigned long nbr) {
     int len = length_str(nbr);
@@ -19,14 +27,4 @@ char *mx_nbr_to_hex(unsigned long nbr) {
         nbr /= 16;
     }
     return result;
-}
-
-static int length_str(unsigned long nbr) {
-    int length = nbr == 0 ? 1 : 0;
-
-    while (nbr) {
-        nbr /= 16;
-        length++;
-    }
-    return length;
 }

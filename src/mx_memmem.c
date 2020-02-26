@@ -1,7 +1,7 @@
 #include "libmx.h"
 
 void *mx_memmem(const void *big, size_t big_len,
-const void *little, size_t little_len) {
+                const void *little, size_t little_len) {
     const unsigned char *big_c = big;
     const unsigned char *little_c = little;
 

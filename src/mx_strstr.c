@@ -5,7 +5,7 @@ char *mx_strstr(const char *haystack, const char *needle) {
     int needle_length = mx_strlen(needle);
 
     if (!needle_length) {
-        return (char *) haystack;
+        return (char*)haystack;
     }
     for (int i = 0; i <= mx_strlen(save_haystack) - needle_length; i++) {
         if (!mx_strncmp(haystack, needle, needle_length)) {
