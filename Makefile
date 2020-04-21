@@ -1,4 +1,5 @@
 NAME = libmx.a
+LIBMX = libmx
 
 SRCD = src
 INCD = inc
@@ -83,6 +84,8 @@ CC = clang
 all: $(NAME)
 
 install: $(NAME) clean
+
+$(LIBMX): $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $@ $^
